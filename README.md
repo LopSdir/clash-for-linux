@@ -10,7 +10,7 @@
 
 ### 下载项目
 
-在服务器上下载项目
+下载项目
 
 ```bash
 $ git clone https://github.com/wanhebin/clash-for-linux.git
