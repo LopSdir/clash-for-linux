@@ -29,11 +29,11 @@ Text1="配置文件config.yaml下载成功！"
 Text2="配置文件config.yaml下载失败，退出启动！"
 if_success $Text1 $Text2
 
-head -6 $Temp_Dir/clash.yaml > $Temp_Dir/head.txt
+# 
 sed -n '/^proxies:/,$p' $Temp_Dir/clash.yaml > $Temp_Dir/proxy.txt
+
 # 合并形成新的config.yaml
-cat $Temp_Dir/head.txt > $Temp_Dir/config.yaml
-cat $Temp_Dir/templete_config.yaml >> $Temp_Dir/config.yaml
+cat $Temp_Dir/templete_config.yaml > $Temp_Dir/config.yaml
 cat $Temp_Dir/proxy.txt >> $Temp_Dir/config.yaml
 \cp $Temp_Dir/config.yaml $Conf_Dir/
 
