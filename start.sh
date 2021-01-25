@@ -29,7 +29,7 @@ Text1="配置文件config.yaml下载成功！"
 Text2="配置文件config.yaml下载失败，退出启动！"
 if_success $Text1 $Text2
 
-# 
+# 取出代理相关配置 
 sed -n '/^proxies:/,$p' $Temp_Dir/clash.yaml > $Temp_Dir/proxy.txt
 
 # 合并形成新的config.yaml
