@@ -6,9 +6,9 @@
 # 判断命令是否正常执行 函数
 if_success() {
 	if [ $? -eq 0 ]; then
-	        action "$1" /bin/true
+	        echo -e "\e[32m$1: 成功\e[0m" # 绿色表示成功
 	else
-	        action "$2" /bin/false
+	        echo -e "\e[31m$2: 失败\e[0m" # 红色表示失败
 	        exit 1
 	fi
 }
